@@ -10,7 +10,7 @@ texto_imagen=pytesseract.image_to_string(imagen)
 with open("salida_horarios.txt",mode ="w")as file:
     file.write(texto_imagen)
 archivo=open("salida_horarios.txt",mode="r")
-patron_horas=re.compile("([01]?[0-9]|2[0-3])(:)([0-5][0-9])")
+patron_horas=re.compile("([01][0-9]|2[0-3])(:)([0-5][0-9])")
 horario=[]
 for linea in archivo:
     fila_horas=[]
